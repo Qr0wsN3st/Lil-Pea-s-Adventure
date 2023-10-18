@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
 
-        //walking
+        //walking animation
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
          

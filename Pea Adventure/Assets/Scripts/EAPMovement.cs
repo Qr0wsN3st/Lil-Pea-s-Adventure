@@ -6,7 +6,7 @@ public class EAPmovement : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] GameObject Pea;
     [SerializeField] GameObject Eap;
-    [SerializeField] float Speed = 1f;
+    public float Speed = 1f;
 
 
 
@@ -28,12 +28,16 @@ public class EAPmovement : MonoBehaviour
         {
             animator.SetBool("IsChasing", true);
             IsInProx = true;
-            Gucci();
         }
         else if(Dist > 5f)
         {
             animator.SetBool("IsChasing", false);
             IsInProx = false;
+        }
+        if(IsInProx == true)
+        {
+            shlorgSound.Play();
+            Eap.transform.position = Vector3.MoveTowards(Eap.transform.position,Pea.transform.position, Speed*Time.deltaTime); 
         }
 
         if(Eap.transform.position.y < -10f)
@@ -43,13 +47,4 @@ public class EAPmovement : MonoBehaviour
        
     }
 
-    void Gucci()
-    {
-        if(IsInProx == true)
-        {
-            shlorgSound.Play();
-            Eap.transform.position = Vector3.MoveTowards(Eap.transform.position,Pea.transform.position, Speed*Time.deltaTime); 
-        }
-    }
-    
 }
