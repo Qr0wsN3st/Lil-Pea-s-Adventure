@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6523687416748623528}
   - component: {fileID: 4985026967243069798}
   m_Layer: 0
-  m_Name: Chase yo ass
+  m_Name: Chase yo
   m_TagString: Enemy Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

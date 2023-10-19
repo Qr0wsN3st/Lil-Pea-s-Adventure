@@ -36,7 +36,7 @@ public class Interactions : MonoBehaviour
             Instantiate(PressEText);
         }
 
-        //hasbeenpressed and third pressed preventative of repeat
+        //hasbeenpressed and third pressed prevents repeat
         if(Input.GetKeyDown(KeyCode.E) && hasbeenpressed == false)
         {
             PressedE = true;

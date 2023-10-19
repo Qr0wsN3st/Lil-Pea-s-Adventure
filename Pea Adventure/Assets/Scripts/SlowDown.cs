@@ -23,7 +23,6 @@ Color color;
         TouchingInk = true;
         Inked = GetComponent<SpriteRenderer>();
         Inked.color = new Color(0.21f,0.21f,0.21f,1f);
-        animator.SetBool("IsFlying", false);
 
         Debug.Log("in Ink");
     }
